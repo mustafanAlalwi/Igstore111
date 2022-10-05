@@ -42,13 +42,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
+    <v-card class="overflow-hidden">
        <v-app-bar
+      
       app
       color="#fcb69f"
       dark
       prominent
       src="ice.jpg"
+      hide-on-scroll
+     
       
     >
       <template v-slot:img="{ props }">
@@ -74,6 +77,7 @@
       large
       color="blue"
       to="/account"
+      
     >
       <v-icon dark >
         
@@ -81,6 +85,7 @@
       </v-icon>
     </v-btn>
     </v-app-bar>
+  </v-card>
     <v-main>
       <router-view></router-view>
     </v-main>

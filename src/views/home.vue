@@ -5,7 +5,8 @@
     <v-card
       class="mx-auto"
       color="grey lighten-4"
-      max-width="1500"
+      max-width="1864"
+      position="absolute"
     >
       <v-img
         :aspect-ratio="16/9"
