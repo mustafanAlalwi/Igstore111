@@ -167,7 +167,6 @@
     </v-card>
   </v-hover>
   </v-container>
-
    </template>
 
 

@@ -48,7 +48,7 @@
       app
       color="#fcb69f"
       dark
-      prominent
+      size="sm"
       src="ice.jpg"
       hide-on-scroll
      
