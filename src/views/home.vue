@@ -1,5 +1,5 @@
 <template>
-
+<div>
   <v-container>
   <v-hover v-slot="{ hover }">
     <v-card
@@ -167,8 +167,14 @@
     </v-card>
   </v-hover>
   </v-container>
-   </template>
 
+
+
+<v-divider vertical></v-divider>
+
+<v-img scr="download.jpg"></v-img>
+</div>
+</template>
 
 <style>
 .v-card--reveal {
