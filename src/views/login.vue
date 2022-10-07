@@ -16,6 +16,7 @@
         :error-messages="passowrdErrors"
         :counter="10"
         label="password"
+        type="password"
         required
         @input="$v.passowrd.$touch()"
         @blur="$v.passowrd.$touch()"
