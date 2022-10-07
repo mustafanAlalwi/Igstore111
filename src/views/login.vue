@@ -27,10 +27,15 @@
         class="mr-4"
         @click="submit"
       >
-        submit
+        log in
       </v-btn>
-      <v-btn @click="clear">
-        clear
+      <v-btn
+      class="mr-4"
+      @click="sign_up"
+      to="/sign_up"
+      >
+
+        sign up
       </v-btn>
     </form>
         </v-col>

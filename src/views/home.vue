@@ -166,13 +166,19 @@
       </v-card-text>
     </v-card>
   </v-hover>
-  </v-container>
-
-
-
-<v-divider vertical></v-divider>
-
-<v-img scr="download.jpg"></v-img>
+  </v-container> 
+<v-carousel  :show-arrows="true" 
+class="mx-auto"
+     
+      max-width="1864"
+      position="absolute"
+      height="1000 " >
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+    ></v-carousel-item>
+  </v-carousel>
 </div>
 </template>
 
@@ -189,10 +195,26 @@
    <script>
     
    
-     export default {
-       name: 'home'
    
-       
-     }
-   </script>
+  export default {
+    data () {
+      return {
+        items: [
+          {
+            src: 'maxresdefault.jpg',
+          },
+          {
+            src: 'dlss301.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          },
+          {
+            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          },
+        ],
+      }
+    },
+  }
+</script>
    
