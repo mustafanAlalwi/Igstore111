@@ -40,6 +40,12 @@ const routes = [
    
     component: () => import('../views/sign_up.vue')
   },
+{
+  path: '/check_out',
+  name: 'check_out',
+  component: () => import('../views/check_out.vue')
+}
+ 
 ]
 
 const router = new VueRouter({

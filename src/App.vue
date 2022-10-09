@@ -138,7 +138,7 @@
           { title: 'admin', icon: 'mdi-account-supervisor-circle',to: '/admin' },
           { title: 'account', icon: 'mdi-account-circle',to: '/login' },
           { title: 'About', icon: 'mdi-information',to: '/about' },
-          {title: 'Check out',icon:'mdi-cash-register',to: '/check_out'},
+          {title: 'check_out',icon:'mdi-cash-register',to: '/check_out'},
           
         ],
         user: {
