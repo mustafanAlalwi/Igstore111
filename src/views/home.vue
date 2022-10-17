@@ -1,19 +1,38 @@
 <template>
 <div>
-  <v-carousel  :show-arrows="true" 
-class="mx-auto"
+  <v-containr>
+    <v-col
+    cols="12"
+      md="12">
+      <v-row>
+        <v-carousel  :show-arrows="true" 
+      class="mx-auto"
      
       max-width="1864"
       position="absolute"
-      height="1000 " >
+      height="864" >
+      
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
     ></v-carousel-item>
   </v-carousel>
+      </v-row> 
+    </v-col>
+  
+  
+  </v-containr>
+ 
+  <div>
   <v-container>
-  <v-hover v-slot="{ hover }">
+    <v-row>
+      <!--hover 4090ti -->
+      <v-col
+      cols="12"
+      md="6"
+      >
+        <v-hover v-slot="{ hover }" >
     <v-card
       class="mx-auto"
       color="grey lighten-4"
@@ -30,7 +49,7 @@ class="mx-auto"
             class="d-flex transition-fast-in-fast-out black v-card--reveal text-h2 white--text"
             style="height: 100%;"
           >
-            $1800.00
+          <v-btn>view more</v-btn>
           </div>
         </v-expand-transition>
       </v-img>
@@ -42,17 +61,24 @@ class="mx-auto"
           <v-btn src="">BUY</v-btn>
         </v-label>
         <div class="font-weight-light grey--text text-h6 mb-2">
-          for the best gaming experience
+          Give your visuals a boost with the best graphics card in 2022
         </div>
         <h3 class="text-h4 font-weight-light green--text mb-2">
-          Give your visuals a boost with the best graphics card in 2022
+          NVIDIA GeForce RTX 4090TI
+          
         </h3>
       </v-card-text>
     </v-card>
   </v-hover>
-  </v-container> 
-  <v-container>
-  <v-hover v-slot="{ hover }">
+ </v-col>
+
+  
+<v-col
+ cols="12"
+ md="6"
+>
+<!--hover 3090ti -->
+ <v-hover v-slot="{ hover }">
     <v-card
     class="mx-auto"
       color="grey lighten-4"
@@ -69,7 +95,7 @@ class="mx-auto"
             class="d-flex transition-fast-in-fast-out green darken-2 v-card--reveal text-h2 white--text"
             style="height: 100%;"
           >
-            $1200.00
+          <v-btn>view more</v-btn>
           </div>
         </v-expand-transition>
       </v-img>
@@ -83,18 +109,64 @@ class="mx-auto"
           Up Your Creative Game
         </div>
         <h3 class="text-h4 font-weight-light green--text mb-2">
-          8K HDR Gaming
+          NVIDIA GeForce RTX 3090TI
+
         </h3>
-        <div class="font-weight-light text-h6 mb-2">
+        <!-- <div class="font-weight-light text-h6 mb-2">
           Connect, play, capture, and watch in brilliant HDR at resolutions 
           up to 8K with GeForce RTX 3090 Ti or RTX 3090. Capture up to 8K
            HDR footage with the GeForce Experience™ ShadowPlay™ feature 
            and play back smoothly with AV1 decode.
-        </div>
+        </div>-->
       </v-card-text>
     </v-card>
   </v-hover>
-</v-container>
+</v-col>
+<v-col
+ cols="12"
+ md="6"
+>
+<!--hover 3090ti -->
+ <v-hover v-slot="{ hover }">
+    <v-card
+    class="mx-auto"
+      color="grey lighten-4"
+      max-width="1864"
+      position="absolute"
+    >
+      <v-img
+        :aspect-ratio="16/9"
+        src="816BVTpUdKL._AC_SL1500_.jpg"
+      >
+        <v-expand-transition>
+          <div
+            v-if="hover"
+            class="d-flex transition-fast-in-fast-out green darken-2 v-card--reveal text-h2 white--text"
+            style="height: 100%;"
+          >
+          <v-btn>view more</v-btn>
+          </div>
+        </v-expand-transition>
+      </v-img>
+      <v-card-text
+        class="pt-6"
+        style="position: relative;"
+      >
+        <div class="font-weight-light grey--text text-h6 mb-2">
+         <v-btn>BUY</v-btn>
+          <br>
+          Up Your Creative Game
+        </div>
+        <h3 class="text-h4 font-weight-light green--text mb-2">
+          NVIDIA GeForce RTX 3080
+        </h3>
+      </v-card-text>
+    </v-card>
+  </v-hover>
+</v-col>
+    </v-row>
+  </v-container>
+ </div>
 </div>
 </template>
 
