@@ -45,6 +45,7 @@
             md="5"
           >
           <v-text-field
+          type="password"
       v-model="password"
       :counter="20"
       :rules="passwordRules"
@@ -57,6 +58,7 @@
             md="5"
           >
           <v-text-field
+          type="password"
       v-model="password"
       :counter="20"
       :rules="confirmPasswordRules"

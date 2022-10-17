@@ -13,7 +13,7 @@
       label="E-mail"
       required
     ></v-text-field>
-    <v-text-field
+    <v-text-field type="password"
       v-model="password"
       :counter="20"
       :rules="passwordRules"
