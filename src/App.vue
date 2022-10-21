@@ -46,10 +46,9 @@
        <v-app-bar
       
       app
-      color="#fcb69f"
+      color="#070807"
       dark
       size="sm"
-      src="ice.jpg"
       hide-on-scroll
      
       
