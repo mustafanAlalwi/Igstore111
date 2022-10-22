@@ -58,7 +58,7 @@
         style="position: relative;"
       >
         <v-label>
-          <v-btn src="">BUY</v-btn>
+          <v-btn v-bind="check_out">BUY</v-btn>
         </v-label>
         <div class="font-weight-light grey--text text-h6 mb-2">
           Give your visuals a boost with the best graphics card in 2022
@@ -104,7 +104,7 @@
         style="position: relative;"
       >
         <div class="font-weight-light grey--text text-h6 mb-2">
-         <v-btn>BUY</v-btn>
+         <v-btn v-bind="check_out">BUY</v-btn>
           <br>
           Up Your Creative Game
         </div>
