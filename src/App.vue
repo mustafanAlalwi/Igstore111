@@ -46,9 +46,10 @@
        <v-app-bar
       
       app
-      color="#070807"
+      color="#000000"
       dark
       size="sm"
+      
       hide-on-scroll
      
       
@@ -56,7 +57,7 @@
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+          gradient="to top ,rgba(0, 0, 0),rgba(0, 204, 0)"
         ></v-img>
       </template>
 
@@ -80,7 +81,7 @@
             v-on="on"
           >
             <v-avatar
-              color="brown"
+              color="black"
               size="48"
             >
               <span class="white--text text-h5">{{ user.initials }}</span>
@@ -91,7 +92,7 @@
           <v-list-item-content class="justify-center">
             <div class="mx-auto text-center">
               <v-avatar
-                color="brown"
+                color="black"
               >
                 <span class="white--text text-h5">{{ user.initials }}</span>
               </v-avatar>
@@ -137,13 +138,13 @@
           { title: 'admin', icon: 'mdi-account-supervisor-circle',to: '/admin' },
           { title: 'account', icon: 'mdi-account-circle',to: '/login' },
           { title: 'About', icon: 'mdi-information',to: '/about' },
-          {title: 'check_out',icon:'mdi-cash-register',to: '/check_out'},
+          { title: 'check_out',icon:'mdi-cash-register',to: '/check_out'},
           
         ],
         user: {
-        initials: 'JA',
-        fullName: 'jafar ali',
-        email: 'jafar.ali@doe.com',
+        initials: 'ini',
+        fullName: 'fullName',
+        email: 'example@doe.com',
       },
     }),
   }

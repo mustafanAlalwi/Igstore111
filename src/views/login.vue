@@ -2,7 +2,7 @@
      <v-container class="mt-10">
      <v-row>    
         <v-col cols="3" sm="3">
-          <v-form
+          <v-form 
          ref="form"
          v-model="valid"
          lazy-validation
