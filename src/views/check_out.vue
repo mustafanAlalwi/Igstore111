@@ -19,45 +19,53 @@
     <v-card-text>Subtotal:##</v-card-text>
     <v-card-text>Shipping:##</v-card-text>
    <v-card-text>Total = shipping + subtotal</v-card-text>
-<!-- 
-here i put snackbar
-
--->
-    <v-btn 
-    @click="snackbar = true"
-    block
-    color="green"
-    class="text-h6 font-weight-light white--text mb-2"
-    >PAY</v-btn>
-    
-    <v-snackbar
-      v-model="snackbar"
-      :timeout="timeout"
+<v-dialog
+      v-model="dialog"
+      persistent
+      max-width="400"
     >
-      {{ text }}
-
-      <template v-slot:action="{ attrs }">
+      <template v-slot:activator="{ on, attrs }">
         <v-btn
-          color="blue"
-          text
+          color="green"
+          class="text-h6 font-weight-light white--text mb-2"
+          dark
+          block
           v-bind="attrs"
-          @click="snackbar = false"
+          v-on="on"
         >
-          Close
+          Pay
         </v-btn>
       </template>
-    </v-snackbar>
+      <v-card>
+        <v-card-title class="text-h5">
+          your purchase has complete
+        </v-card-title>
+        <v-card-text>thank you for buying from us :D</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+         
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            DONE
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
    </v-card>
 </div>
 
   </template>
 <script>
+
 export default {
+
   data: () => ({
     reveal: false,
-    snackbar: false,
-      text: 'bla bla bla',
-      timeout: 3000,
+    dialog: false,
   }),
 }
 </script>
