@@ -70,7 +70,7 @@
            cols="12"
             md="5"
             ><v-btn
-            @click="signUp"
+            @click="submitData"
             >
             sign in
             </v-btn>
@@ -81,8 +81,16 @@
     </v-form>
   </template>
  <script>
- export default {
-   data: () => ({
+ var application = new Vue({
+ el:'#crudApp',
+ data:{
+  allData:'',
+  myModel:false,
+  actionButton:'Insert',
+  dynamicTitle:'Add Data',
+ },
+
+
      valid: false,
      firstname: '',
      lastname: '',
@@ -109,7 +117,16 @@
         v => (v && v.length <= 20 ) || 'password must be less than 20 characters',
        
       ],
+
+      submitData:function(){
+   if(application.email != '' && application.password != '')
+   {
+    
+     axios.post('insert.php', {  firstName:application.email, lastName:application.password});
+    
+  }
+}
       
-   }),
- }
+   });
+ 
 </script>
