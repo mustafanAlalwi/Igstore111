@@ -5,7 +5,7 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
-import cors from 'cors'
+import cors from 'cors' 
 
 Vue.config.productionTip = false
 Vue.use(axios)

@@ -71,7 +71,8 @@
    if(this.email != '' && this.password != '')
    {
     
-   axios.post('http://localhost/insert.php', {  email:this.email, password:this.password}).then(function(response){ alert(response.data); });
+   axios.post('http://localhost/insert.php', {  email:this.email, password:this.password})
+   .then(function(response){ alert(response.data); });
     
   }
 }
