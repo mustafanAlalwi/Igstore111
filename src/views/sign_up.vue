@@ -81,14 +81,9 @@
     </v-form>
   </template>
  <script>
- var application = new Vue({
- el:'#crudApp',
- data:{
-  allData:'',
-  myModel:false,
-  actionButton:'Insert',
-  dynamicTitle:'Add Data',
- },
+import axios from 'axios'
+export default ({
+
 
 
      valid: false,
@@ -122,7 +117,7 @@
    if(application.email != '' && application.password != '')
    {
     
-     axios.post('insert.php', {  firstName:application.email, lastName:application.password});
+     axios.post('http://localhost/insert.php', {  email:application.email, password:application.password}).then(function(response){ alert(response.data.message); });
     
   }
 }

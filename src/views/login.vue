@@ -25,16 +25,16 @@
     
   
       <v-btn
-      :disabled="!valid"
       color="success"
       class="mr-4"
-      @click="validate"
+      @click="submitData"
     >
       log in
     </v-btn>
+
       <v-btn
       class="mr-4"
-      @click="sign_up"
+      @click="submitData"
       to="/sign_up"
       >
 
@@ -45,9 +45,11 @@
      </v-row>
      </v-container>
   </template>
+  
   <script>
-  export default {
-    data: () => ({
+  import axios from 'axios'
+
+  export default({
       valid: true,
       password: '',
       passwordRules: [
@@ -61,12 +63,25 @@
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
       ],
    
-    }),
+    
 
     methods: {
       validate () {
         this.$refs.form.validate()
       },
-    },
+    
+
+
+    submitData:function(){
+     
+   if(this.email != '' && this.password != '')
+   {
+    
+     axios.post('http://localhost:7070/insert.php', {  email:this.email, password:this.password}).then(function(response){ alert(response.data); });
+    
   }
+}
+},
+
+  });
 </script>
