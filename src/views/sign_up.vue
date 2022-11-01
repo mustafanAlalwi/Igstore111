@@ -70,7 +70,7 @@
            cols="12"
             md="5"
             ><v-btn
-            @click="submitData"
+            @click="submitData()"
             >
             sign in
             </v-btn>

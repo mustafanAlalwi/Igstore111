@@ -27,14 +27,14 @@
       <v-btn
       color="success"
       class="mr-4"
-      @click="submitData"
+      @click="submitData()"
     >
       log in
     </v-btn>
 
       <v-btn
       class="mr-4"
-      @click="submitData"
+      @click="submitData()"
       to="/sign_up"
       >
 
