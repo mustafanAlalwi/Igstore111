@@ -4,7 +4,7 @@ import home from '../views/home.vue'
 import axios from 'axios'
 
 Vue.use(VueRouter)
-
+Vue.use(axios)
 const routes = [
   {
     path: '/',
