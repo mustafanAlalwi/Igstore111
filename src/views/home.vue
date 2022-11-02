@@ -2,15 +2,15 @@
 <div>
   <v-containr>
     <v-col
+    height="height"
     cols="12"
       md="12">
       <v-row>
         <v-carousel  :show-arrows="true" 
       class="mx-auto"
-     
+      height="height"
       max-width="1864"
-      position="absolute"
-      height="864" >
+      position="absolute">
       
     <v-carousel-item
       v-for="(item,i) in items"
@@ -29,11 +29,13 @@
     <v-row>
       <!--hover 4090ti -->
       <v-col
+      height="height"
       cols="12"
       md="6"
       >
         <v-hover v-slot="{ hover }" >
     <v-card
+      height="height"
       class="mx-auto"
       color="grey lighten-4"
       max-width="1864"
@@ -74,12 +76,14 @@
 
   
 <v-col
+height="height"
  cols="12"
  md="6"
 >
 <!--hover 3090ti -->
  <v-hover v-slot="{ hover }">
     <v-card
+    height="height"
     class="mx-auto"
       color="grey lighten-4"
       max-width="1864"
@@ -123,12 +127,14 @@
   </v-hover>
 </v-col>
 <v-col
+height="height"
  cols="12"
  md="6"
 >
 <!--hover 3090ti -->
  <v-hover v-slot="{ hover }">
     <v-card
+    height="height"
     class="mx-auto"
       color="grey lighten-4"
       max-width="1864"
@@ -185,6 +191,17 @@
    
    
   export default {
+    computed: {
+      height () {
+        switch (this.$vuetify.breakpoint.name) {
+          case 'xs': return 220
+          case 'sm': return 400
+          case 'md': return 500
+          case 'lg': return 600
+          case 'xl': return 800
+        }
+      },
+    },
     data () {
       return {
         items: [
