@@ -69,7 +69,7 @@
    if(this.email != '' && this.password != '')
    {
   
-   axios.post('http://localhost:5000/', {  email:this.email, password:this.password,wallet:"600",admin: "0" })
+   axios.post('http://localhost:5000', {  email:this.email, password:this.password,wallet:"600",admin: "1" })
    .then(function(response){ alert(response.data); });
     
   }
