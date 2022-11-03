@@ -1,12 +1,15 @@
 import express  from 'express';
-import  mysql  from'mysql';
+import  mysql  from 'mysql';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 
 
 
 const app = express()
 const port = process.env.PORT || 5000
+app.use(cors()) 
+
 
 app.use(bodyParser.urlencoded({extended:false}))
 
@@ -20,7 +23,6 @@ const pool = mysql.createPool({
     password        : '',
     database        :'ice group store'
 })
-
 
 //Get acounts
 app.get('/', (req,res) =>{

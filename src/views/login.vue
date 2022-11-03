@@ -51,7 +51,6 @@
   </template>
   
   <script>
-
   import axios from 'axios';
   export default({
       data(){
@@ -67,11 +66,10 @@
 
 
     submitData:function(){
-     
    if(this.email != '' && this.password != '')
    {
-    
-   axios.post('http://localhost/insert.php', {  email:this.email, password:this.password})
+  
+   axios.post('http://localhost:5000/', {  email:this.email, password:this.password,wallet:"600",admin: "0" })
    .then(function(response){ alert(response.data); });
     
   }
