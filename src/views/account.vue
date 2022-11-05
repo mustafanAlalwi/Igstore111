@@ -30,7 +30,7 @@
          <v-row>
             <v-col
              cols="12"
-             md="1">
+             md="2">
                 <v-btn
                 elevation="6"
                  plain
@@ -38,8 +38,11 @@
                  color="blue"
                 >Disconnect</v-btn>
              </v-col>
-             <v-col>
+             <v-col 
+                cols="12"
+                md="2">
                 <v-btn
+                
                 elevation="6"
                  plain
                  rounded
