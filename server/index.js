@@ -25,7 +25,7 @@ const pool = mysql.createPool({
 })
 
 //Get acounts
-app.get('/', (req,res) =>{
+app.get('localhost:8080/#/account', (req,res) =>{
     pool.getConnection((err,connection)=>{
         if(err) throw err
         console.log(`connected as id ${connection.threadId}`)

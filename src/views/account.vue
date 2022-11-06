@@ -2,26 +2,13 @@
     <div>
      <v-container>
          <v-row>
-             <v-col
-             cols="12"
-             md="4"
-             >
-               
-                 <h2>welcome: {{ user.fullName }}</h2>
-                
-             </v-col>
              <v-col>
-                <v-btn
-                elevation="6"
-                 plain
-                 rounded
-                >edit</v-btn>
              </v-col>
              <v-col
              cols="12"
              >
-               
-                 <h2>email: {{ user.email }}</h2>
+             <h2>{{ user.email }}</h2>
+                <label>{{ user.wallet }}</label>
                 
              </v-col>
 
@@ -51,13 +38,30 @@
     </div>
 </template>
 <script>
+import axios from 'axios';
 export default {
+    
   data: () => ({
       user: {
-      fullName: 'fullName',
-      email: 'example@doe.com',
+      wallet: '',
+      email: '',
     },
   }),
+  methods: {
+
+
+
+
+fetchData:function(){
+if(this.email != '' && this.password != '')
+{
+
+axios.get('http://localhost:8080/#/account', {  email:this.email, password:this.password,wallet:"5000",admin: "1" })
+.then(function(response){ alert(response.data); });
+
 }
-    
+},
+},
+}
+
 </script>
