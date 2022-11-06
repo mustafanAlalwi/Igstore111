@@ -51,7 +51,7 @@
             class="d-flex transition-fast-in-fast-out black v-card--reveal text-h2 white--text"
             style="height: 100%;"
           >
-          <v-btn>view more</v-btn>
+          <v-btn to="/viewMore">view more</v-btn>
           </div>
         </v-expand-transition>
       </v-img>
@@ -99,7 +99,7 @@ height="height"
             class="d-flex transition-fast-in-fast-out green darken-2 v-card--reveal text-h2 white--text"
             style="height: 100%;"
           >
-          <v-btn>view more</v-btn>
+          <v-btn to="/viewMore">view more</v-btn>
           </div>
         </v-expand-transition>
       </v-img>
@@ -150,7 +150,7 @@ height="height"
             class="d-flex transition-fast-in-fast-out green darken-2 v-card--reveal text-h2 white--text"
             style="height: 100%;"
           >
-          <v-btn>view more</v-btn>
+          <v-btn to="/viewMore">view more</v-btn>
           </div>
         </v-expand-transition>
       </v-img>

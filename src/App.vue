@@ -96,18 +96,11 @@
               >
                 <span class="white--text text-h5">{{ user.initials }}</span>
               </v-avatar>
-              <h3>{{ user.fullName }}</h3>
+              
               <p class="text-caption mt-1">
                 {{ user.email }}
               </p>
-              <v-divider class="my-3"></v-divider>
-              <v-btn
-                depressed
-                rounded
-                text
-              >
-                Edit Account
-              </v-btn>
+            <h5>{{ user.wallet }}</h5>
               <v-divider class="my-3"></v-divider>
               <v-btn
                 depressed
@@ -139,11 +132,12 @@
           { title: 'account', icon: 'mdi-account-circle',to: '/login' },
           { title: 'About', icon: 'mdi-information',to: '/about' },
           { title: 'check_out',icon:'mdi-cash-register',to: '/check_out'},
+  
           
         ],
         user: {
         initials: 'ini',
-        fullName: 'fullName',
+        wallet: 'wallet',
         email: 'example@doe.com',
       },
     }),
