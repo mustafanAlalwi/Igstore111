@@ -7,7 +7,7 @@
              <v-col
              cols="12"
              >
-             <h1>{{ user}}</h1>
+             <h1>{{user}}</h1>
                 
              </v-col>
 
@@ -40,19 +40,21 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 import axios from 'axios';
 export default ({
   data: () =>{
    return{
-    email:[],
-    wallet:[],
+    user:[],
+    
    }
 },
 mounted() {
   axios
-  .get('http://localhost:5000',{email:this.email, password:this.password,wallet:"5000",admin: "0"})
-  .then(res => (this.user = res))
+  .get('http://localhost:5000',)
+  .then(res => {
+    this.user =res.data
+    
+  })
 },
 })
 </script>
