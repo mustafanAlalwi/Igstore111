@@ -63,14 +63,19 @@ export default ({
       },
    
 
-      submitData:function(){
-   if(application.email != '' && application.password != '')
-   {
-    
-     axios.post('http://localhost/insert.php', {  email:application.email, password:application.password}).then(function(response){ alert(response.data.message); });
-    
-  }
+      methods: {
+
+
+submitData:function(){
+if(this.email != '' && this.password != '')
+{
+
+axios.post('http://localhost:5000', {  email:this.email, password:this.password,wallet:"5000",admin: "0" })
+.then(function(response){ alert(response.data); });
+
 }
+}
+},
       
    });
  

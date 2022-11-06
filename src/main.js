@@ -16,6 +16,7 @@ Vue.config.productionTip = false
 Vue.use(axios)
 Vue.use(cors)
 new Vue({
+  el:'#app',
   router,
   store,
   vuetify,

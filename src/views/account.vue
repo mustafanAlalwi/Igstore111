@@ -7,8 +7,7 @@
              <v-col
              cols="12"
              >
-             <h2>{{ user.email }}</h2>
-                <label>{{ user.wallet }}</label>
+             <h1>{{ user}}</h1>
                 
              </v-col>
 
@@ -41,30 +40,19 @@
     </div>
 </template>
 <script>
+import Vue from 'vue';
 import axios from 'axios';
-export default {
-    
-  data: () => ({
-      user: {
-      wallet: '',
-      email: '',
-    },
-  }),
-  methods: {
-
-
-
-
-fetchData:function(){
-if(this.email != '' && this.password != '')
-{
-
-axios.get('http://localhost:8080/#/account', {  email:this.email, password:this.password,wallet:"5000",admin: "1" })
-.then(function(response){ alert(response.data); });
-
-}
+export default ({
+  data: () =>{
+   return{
+    email:[],
+    wallet:[],
+   }
 },
+mounted() {
+  axios
+  .get('http://localhost:5000',{email:this.email, password:this.password,wallet:"5000",admin: "0"})
+  .then(res => (this.user = res))
 },
-}
-
+})
 </script>

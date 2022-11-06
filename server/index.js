@@ -7,7 +7,7 @@ import cors from 'cors';
 
 
 const app = express()
-const port = process.env.PORT || 5000
+
 app.use(cors()) 
 
 
@@ -25,12 +25,10 @@ const pool = mysql.createPool({
 })
 
 //Get acounts
-app.get('localhost:8080/#/account', (req,res) =>{
+app.get('', (req,res) =>{
     pool.getConnection((err,connection)=>{
         if(err) throw err
         console.log(`connected as id ${connection.threadId}`)
-
-
         connection.query('SELECT * from accounts', (err,rows)=>{
             connection.release() // return the connection to pool
             if(!err){
@@ -65,7 +63,7 @@ app.post('/', (req,res) =>{
     })
 })
 
-
+const port = process.env.PORT || 5000
 
 
 
