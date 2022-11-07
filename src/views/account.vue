@@ -7,8 +7,8 @@
              <v-col
              cols="12"
              >
+            
              <h1>{{user}}</h1>
-                
              </v-col>
 
              
@@ -52,7 +52,7 @@ mounted() {
   axios
   .get('http://localhost:5000',)
   .then(res => {
-    this.user =res.data
+    this.user = res.data
     
   })
 },
